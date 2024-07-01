@@ -1,3 +1,9 @@
+document.getElementById('city').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        getWeather();
+    }
+});
+
 function getWeather() {
     const apiKey = '3d748a7e7bed53b51456d4b05dea4642';
     const city = document.getElementById('city').value;
@@ -97,6 +103,3 @@ function showImage() {
     const weatherIcon = document.getElementById('weather-icon');
     weatherIcon.style.display = 'block'; // Make the image visible once it's loaded
 }
-import { inject } from '@vercel/analytics';
-
-inject();
